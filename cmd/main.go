@@ -7,7 +7,7 @@ import (
 )
 
 func main(){
-	app.Sched_run()
+	// app.Sched_run()
 	port := os.Getenv("PORT")
 	server := app.NewServer()
 	http.ListenAndServe(":" + port, server)

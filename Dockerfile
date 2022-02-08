@@ -1,6 +1,7 @@
 FROM golang:1.16-alpine
 
 ENV PORT=8081
+ENV CRON_STR_FOR_SCHED="CRON_TZ=US/Mountain 24 12 * * 1-5"
 
 COPY .build/certs/*.crt /usr/local/share/ca-certificates/
 
