@@ -14,6 +14,7 @@ func MakeAndRunScheduler(s *Server){
 	c := cron.New()
 	c.AddFunc(cron_str, func() {
 		fmt.Println("SCHEDULED TASK INITIATED AND RUNNING")
+		FakeFinder()
 	})
 	c.Start()
 	fmt.Println("Scheduler Started Successfully")
